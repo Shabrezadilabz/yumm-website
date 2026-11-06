@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-surface-brand: #381932;
+  --color-surface-brand-soft: #5a3352;
+  --color-surface-base: #fff3e6;
+  --color-surface-subtle: #f6e4cf;
+  --color-surface-card: #ffffff;
+  --color-surface-accent: #b98aae;
+  --color-surface-ink: #2a1226;
+  --color-text-primary: #2a1226;
+  --color-text-brand: #381932;
+  --color-text-body: #6b5466;
+  --color-text-caption: #86717f;
+  --color-text-on-brand: #fff3e6;
+  --color-text-on-brand-muted: #dcc7d5;
+  --color-text-accent: #7a4f70;
+  --color-text-error: #c2412d;
+  --color-border-default: #ebd5bf;
+  --color-border-subtle: #f6e4cf;
+  --color-border-brand: #381932;
+  --color-colour-milk-50: #fff3e6;
+  --color-colour-milk-200: #ebd5bf;
+  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--color-surface-base);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif-display {
+  font-family: var(--font-serif);
+}
+
+.page-max {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: max(1rem, env(safe-area-inset-left));
+  padding-right: max(1rem, env(safe-area-inset-right));
+}
+
+@media (min-width: 640px) {
+  .page-max {
+    padding-left: max(1.5rem, env(safe-area-inset-left));
+    padding-right: max(1.5rem, env(safe-area-inset-right));
+  }
+}
+
+@media (min-width: 1280px) {
+  .page-max {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.trust-muted {
+  color: var(--color-text-on-brand-muted);
+  transition: color 0.35s ease;
+}
+
+.trust-highlight {
+  font-family: var(--font-serif);
+  color: var(--color-text-on-brand);
+  transition: color 0.35s ease;
+}
+
+.trust-highlight.revealed {
+  color: #c8f0b4;
+}
+
+.trust-body {
+  color: var(--color-text-on-brand-muted);
+  transition: color 0.45s ease;
+}
+
+.trust-body.revealed {
+  color: var(--color-text-on-brand);
+}
